@@ -1,7 +1,7 @@
 <view
   class="nav-bar"
   style="padding-top:{{statusBarHeight}}px;height:{{navBarHeight}}px;background-color:{{backgroundColor}};color:{{fontColor}};">
-  <view class="back" wx:if="{{showLeftBtn}}" bindtap="back" style="width:{{leftBtnWidth}}" wx:if="{{mode === 'default'}}">
+  <view class="back" bindtap="back" style="width:{{leftBtnWidth}}" wx:if="{{mode === 'default' && showLeftBtn}}">
     <view class="left-angle" style="border-color:{{fontColor}}"></view>
     <view>{{leftBtnText}}</view>
   </view>
