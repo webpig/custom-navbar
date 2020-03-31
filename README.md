@@ -34,7 +34,7 @@ npm install --save custom-navbar
 
 效果如下：
 
-![navbar简单示例](https://i.niupic.com/images/2020/03/31/7crv.png)
+![navbar简单示例](https://i.niupic.com/images/2020/03/31/7cED.png)
 
 至此，组件接入完成。
 
