@@ -51,3 +51,8 @@ leftBtnWidth    |string      |'30px'   |左边按钮区域大小，可自定义�
 backgroundColor |string      |'#fff'   |导航栏背景颜色
 fontColor       |string      |'#000    |字体颜色
 bindback        |eventhandle |         |左边按钮点击事件
+
+First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
