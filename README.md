@@ -40,8 +40,8 @@ npm install --save custom-navbar
 
 ### 组件属性
 
-属性名           | 类型         | 默认值    |  说明  |
-------------------------------------------------
+属性名           | 类型        | 默认值   |  说明  
+----------------|------------|---------|-------
 mode            |string      |'default'|有三种模式：'default', 'menu-btn', 'custom'
 title           |string      |         |标题
 titleSize       |string      |'17px'   |标题大小，可自定义，带单位，rpx和px都可以
