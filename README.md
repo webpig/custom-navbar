@@ -141,3 +141,34 @@ back() {
 ![](https://i.niupic.com/images/2020/03/31/7ctA.png)
 
 mode为 ```menu-btn``` 时，左边显示为和右边一样的胶囊样式，可以自定义胶囊里面的图标以及事件。
+
+```html
+<custom-navbar mode="menu-btn"></custom-navbar>
+```
+
+![](https://i.niupic.com/images/2020/03/31/7cBJ.png)
+
+添加图标，这里可以添加两个图标：
+
+```html
+<custom-navbar mode="menu-btn">
+  <icon type="clear" size="20" slot="menu-btn-left" />
+  <icon type="search" size="20" slot="menu-btn-right" />
+</custom-navbar>
+```
+
+![](https://i.niupic.com/images/2020/03/31/7cDe.png)
+
+左右图标的设置只要设置 **slot** 属性就可以了，左边：```slot="menu-btn-left"```，右边：```slot="menu-btn-right" ```。可以自己添加事件。这里的元素自定义，图标和图片的尺寸推荐 **20px**。
+
+mode为 ```custom``` 时，左边的按钮可以自定义：
+
+```html
+<custom-navbar mode="custom">
+  <view style="font-size:32px">+</view>
+</custom-navbar>
+```
+
+![](https://i.niupic.com/images/2020/03/31/7cE8.png)
+
+### 欢迎各位提建议，帮助优化和改进！
