@@ -108,7 +108,7 @@ bindback        |eventhandle |         |左边按钮点击事件
 
 #### mode
 
-mode为 ```default``` 时，即常规的导航栏，返回键+标题，返回键可以隐藏，只显示标题。
+**mode为 ```default``` 时，即常规的导航栏，返回键+标题，返回键可以隐藏，只显示标题。**
 
 示例代码：
 
@@ -140,7 +140,7 @@ back() {
 
 ![](https://i.niupic.com/images/2020/03/31/7ctA.png)
 
-mode为 ```menu-btn``` 时，左边显示为和右边一样的胶囊样式，可以自定义胶囊里面的图标以及事件。
+**mode为 ```menu-btn``` 时，左边显示为和右边一样的胶囊样式，可以自定义胶囊里面的图标以及事件。**
 
 ```html
 <custom-navbar mode="menu-btn"></custom-navbar>
@@ -161,7 +161,7 @@ mode为 ```menu-btn``` 时，左边显示为和右边一样的胶囊样式，可
 
 左右图标的设置只要设置 **slot** 属性就可以了，左边：```slot="menu-btn-left"```，右边：```slot="menu-btn-right" ```。可以自己添加事件。这里的元素自定义，图标和图片的尺寸推荐 **20px**。
 
-mode为 ```custom``` 时，左边的按钮可以自定义：
+**mode为 ```custom``` 时，左边的按钮可以自定义：**
 
 ```html
 <custom-navbar mode="custom">
