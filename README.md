@@ -40,14 +40,14 @@ npm install --save custom-navbar
 
 ### 组件属性
 
-|属性名           |类型         |默认值    |  说明  |
+属性名           |类型         |默认值    |  说明  |
 ---               ---          ---       ---
-|mode            |string      |'default'| 有三种模式：'default', 'menu-btn', 'custom'|
-|title           |string      |         |标题|
-|titleSize       |string      |'17px'   |标题大小，可自定义，带单位，rpx和px都可以|
-|showLeftBtn     |boolean     |true     |是否显示左边按钮，即返回键|
-|leftBtnText     |string      |         |左边按钮文本，即返回箭头右边文字|
-|leftBtnWidth    |string      |'30px'   |左边按钮区域大小，可自定义点击区域大小|
-|backgroundColor |string      |'#fff'   |导航栏背景颜色|
-|fontColor       |string      |'#000    |字体颜色|
-|bindback        |eventhandle |         |左边按钮点击事件|
+mode            |string      |'default'|有三种模式：'default', 'menu-btn', 'custom'
+title           |string      |         |标题
+titleSize       |string      |'17px'   |标题大小，可自定义，带单位，rpx和px都可以
+showLeftBtn     |boolean     |true     |是否显示左边按钮，即返回键
+leftBtnText     |string      |         |左边按钮文本，即返回箭头右边文字
+leftBtnWidth    |string      |'30px'   |左边按钮区域大小，可自定义点击区域大小
+backgroundColor |string      |'#fff'   |导航栏背景颜色
+fontColor       |string      |'#000    |字体颜色
+bindback        |eventhandle |         |左边按钮点击事件
