@@ -10,7 +10,7 @@ npm install --save custom-navbar
 
 在页面的json文件加入如下配置：
 
-```
+```js
 {
   "usingComponents": {
     "custom-navbar": "custom-navbar"
@@ -19,7 +19,7 @@ npm install --save custom-navbar
 }
 ```
 
-3、在微信开发工具上构建npm，并且本地设置勾选 ```**使用npm模块**```，如图所示：
+3、在微信开发工具上构建npm，并且本地设置勾选 ```使用npm模块```，如图所示：
 
 ![构建npm演示](https://i.niupic.com/images/2020/03/31/7crs.jpeg)
 ![勾选使用npm模块演示](https://i.niupic.com/images/2020/03/31/7cru.jpeg)
@@ -28,7 +28,7 @@ npm install --save custom-navbar
 
 在wxml上加入：
 
-```
+```js
 <custom-navbar title="首页"></custom-navbar>
 ```
 
@@ -37,6 +37,59 @@ npm install --save custom-navbar
 ![navbar简单示例](https://i.niupic.com/images/2020/03/31/7crv.png)
 
 至此，组件接入完成。
+
+注意：这里的导航栏是使用了fixed定位的，如果我们要保持原来的布局，可以设置页面容器的 ```padding-top```，比如有如下结构：
+
+```js
+<custom-navbar
+  title="首页"
+  bindback="back"
+  showLeftBtn="{{true}}"
+  backgroundColor="red"
+  fontColor="#fff">
+</custom-navbar>
+<view class="container">
+  // 子元素
+</view>
+```
+
+我们可以计算出导航栏的高度，然后设置padding-top：
+
+```js
+// utils.js
+const HEIGHT_OF_IOS_STATUS_BAR = 44
+const HEIGHT_OF_ANDROID_STATUS_BAR = 48
+
+const getNavBarHeightAndStatusBarHeight = () => {
+  let obj = {
+    statusBarHeight: 0,
+    navBarHeight: 0
+  }
+
+  wx.getSystemInfo({
+    success: ({statusBarHeight, system}) => {
+      obj.statusBarHeight = statusBarHeight,
+      obj.navBarHeight = system.indexOf('iOS') > -1
+        ? HEIGHT_OF_IOS_STATUS_BAR 
+        : HEIGHT_OF_ANDROID_STATUS_BAR
+    }
+  })
+
+  return obj
+}
+
+// index.js
+getNavBarHeightAndStatusBarHeight () {
+  const { statusBarHeight, navBarHeight } = util.getNavBarHeightAndStatusBarHeight()
+  this.setData({
+    statusBarHeight,
+    navBarHeight
+  })
+}
+  
+// index.wxml
+<view class="container" style="padding-top:{{statusBarHeight + navBarHeight}}px"></view>
+```
 
 ### 组件属性
 
@@ -52,7 +105,39 @@ backgroundColor |string      |'#fff'   |导航栏背景颜色
 fontColor       |string      |'#000    |字体颜色
 bindback        |eventhandle |         |左边按钮点击事件
 
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
+
+#### mode
+
+mode为 ```default``` 时，即常规的导航栏，返回键+标题，返回键可以隐藏，只显示标题。
+
+示例代码：
+
+```js
+<!--index.wxml-->
+<custom-navbar title="首页" bindback="back" showLeftBtn="{{false}}"></custom-navbar>
+
+//index.js
+back() {
+  console.log('back')
+}
+```
+
+![](https://i.niupic.com/images/2020/03/31/7ct0.png)
+
+注意，我们这里返回隐藏键的写法：```showLeftBtn="{{false}}"``` ，直接这样写是不行的：```showLeftBtn="false"```，因为这样会当作字符串处理。
+
+设置字体颜色和背景颜色：
+
+```js
+<custom-navbar
+  title="首页"
+  bindback="back"
+  showLeftBtn="{{true}}"
+  backgroundColor="red"
+  fontColor="#fff">
+</custom-navbar>
+```
+
+![](https://i.niupic.com/images/2020/03/31/7ctA.png)
+
+mode为 ```menu-btn``` 时，左边显示为和右边一样的胶囊样式，可以自定义胶囊里面的图标以及事件。
