@@ -1,0 +1,20 @@
+<view
+  class="nav-bar"
+  style="padding-top:{{statusBarHeight}}px;height:{{navBarHeight}}px;background-color:{{backgroundColor}};color:{{fontColor}};">
+  <view class="back" wx:if="{{showLeftBtn}}" bindtap="back" style="width:{{leftBtnWidth}}" wx:if="{{mode === 'default'}}">
+    <view class="left-angle" style="border-color:{{fontColor}}"></view>
+    <view>{{leftBtnText}}</view>
+  </view>
+  <view class="menu-btn" style="height:{{menuButtonInfo.height}}px;width:{{menuButtonInfo.width}}px;" wx:if="{{mode === 'menu-btn'}}">
+    <view class="menu-btn-item">
+      <slot name="menu-btn-left"></slot>
+    </view>
+    <view class="menu-btn-item">
+      <slot name="menu-btn-right"></slot>
+    </view>
+  </view>
+  <view class="poa">
+    <slot wx:if="{{mode === 'custom'}}"></slot>
+  </view>
+  <view class="title" style="font-size:{{titleSize}}">{{title}}</view>
+</view>

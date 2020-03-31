@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "comp": "../../components/index"
+  },
+  "navigationStyle": "custom"
+}

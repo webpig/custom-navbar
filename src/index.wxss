@@ -1,0 +1,70 @@
+@import "./common.wxss";
+@import "./reset.wxss";
+
+.index {
+  color: green;
+}
+
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-weight: bold;
+  z-index: 999999;
+}
+.left-wrap {
+  position: absolute;
+}
+.left-angle {
+  width: 10px;
+  height: 10px;
+  border-left: 1.5px solid #000;
+  border-bottom: 1.5px solid #000;
+  transform: rotate(45deg);
+}
+.back {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 20px;
+  font-size: 14px;
+}
+.title {
+  width: 100%;
+  text-align: center;
+}
+.menu-btn {
+  display: flex;
+  border: 1px solid #eee;
+  border-radius: 100px;
+  background: #fff;
+  position: absolute;
+  left: 10px;
+  box-sizing: border-box;
+}
+.menu-btn::after {
+  content: '';
+  height: 40rpx;
+  width: 1rpx;
+  background: #eee;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); 
+}
+.menu-btn-item {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.poa {
+  position: absolute;
+  left: 10px;
+}

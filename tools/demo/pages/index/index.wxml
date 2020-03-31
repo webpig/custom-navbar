@@ -1,0 +1,9 @@
+<comp
+  title="首页"
+  bindback="back"
+  mode="menu-btn">
+  <!-- <icon type="success" size="12" slot="menu-btn-left"></icon>
+  <icon type="success" size="12" slot="menu-btn-right"></icon> -->
+  <image src="http://pic.616pic.com/ys_bnew_img/00/04/17/3Sd12m4wcQ.jpg" slot="menu-btn-left" style="width:20px;height:20px"></image>
+  <image src="http://pic.616pic.com/ys_bnew_img/00/04/17/3Sd12m4wcQ.jpg" slot="menu-btn-right" style="width:20px;height:20px"></image>
+</comp>
