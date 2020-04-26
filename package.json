@@ -1,8 +1,9 @@
 {
   "name": "custom-navbar",
-  "version": "1.0.5",
-  "description": "",
+  "version": "1.0.6",
+  "description": "微信小程序自定义导航栏",
   "main": "miniprogram_dist/index.js",
+  "keywords": ["miniprogram", "WeChat", "navigation"],
   "scripts": {
     "dev": "gulp dev --develop",
     "watch": "gulp watch --develop --watch",

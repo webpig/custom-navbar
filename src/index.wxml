@@ -16,5 +16,8 @@
   <view class="poa">
     <slot wx:if="{{mode === 'custom'}}"></slot>
   </view>
+  <view class="title-wrap">
+    <slot name="title"></slot>
+  </view>
   <view class="title" style="font-size:{{titleSize}}">{{title}}</view>
 </view>

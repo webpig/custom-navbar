@@ -68,3 +68,8 @@
   position: absolute;
   left: 10px;
 }
+.title-wrap {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}

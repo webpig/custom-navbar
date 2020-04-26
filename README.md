@@ -171,5 +171,22 @@ back() {
 
 ![](https://i.niupic.com/images/2020/03/31/7cE8.png)
 
+### 自定义标题（1.0.6版本新增功能）
 
-### 此组件还不够完善，可能存在问题，欢迎大家提建议，帮助优化和改进！谢谢
+我们可以在标签上添加 slot="title" 来自定义标题栏：
+
+```html
+<comp
+  bindback="back"
+  mode="menu-btn">
+  <image src="http://pic.616pic.com/ys_bnew_img/00/04/17/3Sd12m4wcQ.jpg" slot="menu-btn-left" style="width:20px;height:20px"></image>
+  <image src="http://pic.616pic.com/ys_bnew_img/00/04/17/3Sd12m4wcQ.jpg" slot="menu-btn-right" style="width:20px;height:20px"></image>
+  <input type="text" slot="title" style="width:220rpx;height:60rpx;border-radius:30rpx;background:#f8f8f8;font-size:28rpx;padding-left:30rpx" placeholder="请输入关键字"/>
+</comp>
+```
+
+![](https://i.niupic.com/images/2020/04/26/7vIh.png)
+
+我们在添加自定义标题的时候就不用设置title属性了
+
+### 本组件持续更新，欢迎大家提建议，帮助优化和改进！谢谢
