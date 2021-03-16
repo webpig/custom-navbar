@@ -5,7 +5,10 @@
     <view class="left-angle" style="border-color:{{fontColor}}"></view>
     <view>{{leftBtnText}}</view>
   </view>
-  <view class="menu-btn" style="height:{{menuButtonInfo.height}}px;width:{{menuButtonInfo.width}}px;" wx:if="{{mode === 'menu-btn'}}">
+  <view
+    class="menu-btn"
+    style="height:{{menuButtonInfo.height}}px;width:{{menuButtonInfo.width}}px;background-color:{{menuBtnBgColor}}"
+    wx:if="{{mode === 'menu-btn'}}">
     <view class="menu-btn-item">
       <slot name="menu-btn-left"></slot>
     </view>

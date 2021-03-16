@@ -37,6 +37,10 @@ Component({
       type: String,
       value: '#000'
     },
+    menuBtnBgColor: {
+      type: String,
+      value: '#fff'
+    }
   },
   data: {
     statusBarHeight: 0,
